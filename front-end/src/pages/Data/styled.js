@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Card, Container, Navbar, Figure } from 'react-bootstrap'
+import { Card, Container, Navbar, Figure, Form } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const DivContainer = styled(Container) `
@@ -50,11 +50,43 @@ export const NavImage = styled(Figure)`
     background-color: #c3c3c3;
   }
 `
-
 export const Title = styled(Card.Header)`  
   font-size: 40px;  
   line-height: 48px;  
   color: #979595;
   border: none;
   background-color: transparent;
+`
+
+export const FormName = styled(Form)`
+  width: 628px;  
+`
+
+export const FormData = styled(FormName)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  
+  &:last-child {
+    margin-bottom: 61px;
+  }
+`
+
+export const InputGroup = styled(Form.Group)`
+  width: 298px;
+`
+
+export const Label = styled(Form.Label)`
+  font-size: 20px;
+  line-height: 24.2px;
+  font-weight: 400;
+  color: #979595
+`
+
+export const Input = styled(Form.Control)`
+  background-color: #f3f3f3 ;
+  border-radius: 11px;
+  border: none;
+  height: 44px;
+
 `

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer'
 
 import { Image, Form } from 'react-bootstrap'
@@ -11,7 +12,31 @@ import clipboardIcon from './assets/clipboardIcon.png'
 import resumeIcon from './assets/resumeIcon.png'
 import line from './assets/line.png'
 
-export default function Dados() {  
+export default function Dados() {
+
+  const [ signs, setSigns ] = useState([])
+  const [ bloodType, setBloodType ] = useState([])
+
+  const navigate = useNavigate()
+
+  useEffect(() => {    
+    getSignos('http://localhost:3333/signos')
+    getBloodType('http://localhost:3333/tipos-sanguineos')
+  }, [navigate])
+
+  async function getSignos(url) {
+    const response = await fetch(url)
+    const signos = await response.json()
+
+    setSigns(signos)
+  }
+
+  async function getBloodType(url) {
+    const response = await fetch(url)
+    const bloodType = await response.json()
+
+    setBloodType(bloodType)
+  }
 
   return (
     <S.DivContainer>
@@ -34,36 +59,57 @@ export default function Dados() {
           </S.NavImage>
         </S.Nav>
         <S.Title>Dados Pessoais</S.Title>
-        <Form>
+        <S.FormName>
           <Form.Group className="mb-3">
-            <Form.Label>Nome</Form.Label>
-            <Form.Control type="text" />            
+            <S.Label>Nome</S.Label>
+            <S.Input type="text" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>CPF</Form.Label>
-            <Form.Control type="text" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Data de Nascimento</Form.Label>
-            <Form.Control type="date" />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Signo</Form.Label>
-            <Form.Control type="select" />
-          </Form.Group>
-          <Form.Group className="mb-3" >
-            <Form.Label>Tipo Sanguíneo</Form.Label>
-            <Form.Control type="text" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>E-mail</Form.Label>
-            <Form.Control type="email" />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Telefone</Form.Label>
-            <Form.Control type="text" />
-          </Form.Group>          
-        </Form>
+        </S.FormName>
+
+        <S.FormData>
+          <S.InputGroup className="mb-3">
+            <S.Label>CPF</S.Label>
+            <S.Input type="text" />
+          </S.InputGroup>
+
+          <S.InputGroup className="mb-3">
+            <S.Label>Data de Nascimento</S.Label>
+            <S.Input type="text" />
+          </S.InputGroup>
+
+        </S.FormData>
+
+        <S.Label>Signo</S.Label>
+        <Form.Select>
+          <option></option>
+          {signs.map(signo => {
+            return (
+              <option key={signo}>{signo}</option>
+            )
+          })}
+        </Form.Select>
+        
+          <S.Label>Tipo Sanguíneo</S.Label>
+          <Form.Select>
+          <option></option>
+          {bloodType.map(type => {
+            return (
+              <option key={type}>{type}</option>
+            )
+          })}
+        </Form.Select>
+
+
+        <S.FormData>
+          <S.InputGroup className="mb-3" controlId="formBasicEmail">
+            <S.Label>E-mail</S.Label>
+            <S.Input type="email" />
+          </S.InputGroup>
+          <S.InputGroup className="mb-3">
+            <S.Label>Telefone</S.Label>
+            <S.Input type="text" />
+          </S.InputGroup>
+        </S.FormData>
         <Footer />
       </S.DivCard>
     </S.DivContainer>
