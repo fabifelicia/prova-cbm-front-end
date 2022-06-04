@@ -41,10 +41,13 @@ export const Title = styled(Card.Header)`
 
 export const List = styled(ListGroup)`
   width: 100%;
-  border-radius: 10px;
-  background-color: #f3f3f3;
+  border-radius: 10px;  
   border: none; 
-  margin-bottom: 27px;  
+  margin-bottom: 27px;
+  
+  &:nth-child(2n) {
+    background-color: #f3f3f3;
+  }
 `
 
 export const ListGroupItem = styled(ListGroup.Item)`  
@@ -70,16 +73,12 @@ export const Buton = styled(Button)`
   background-image: linear-gradient(91.76deg, #D42F43 0%, #D3823E 100%);  
 `
 
-export const ButtonReturn = styled(Button)`
+export const ButtonReturn = styled(Buton)`
 width: 216.84px;
 height: 68px;
 position: relative;
-margin-top: 900px;
-border-radius: 14px; 
+margin-top: 900px; 
 font-size: 24px;
 line-height: 29px;
 font-weight: 500;
-border: none;
-color: #fff;
-background-image: linear-gradient(91.76deg, #D42F43 0%, #D3823E 100%);
 `

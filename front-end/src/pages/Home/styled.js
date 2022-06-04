@@ -57,5 +57,9 @@ export const Buton = styled(Button)`
   color: #fff;
   line-height: 38.73px;
   border: none;
+  background-image: ${props => props.primary 
+    ? 'linear-gradient(91.76deg, #D42F43 0%, #D3823E 100%)' 
+    : 'linear-gradient(91.76deg, #A8A8A8 0%, #C4C4C4 100%)'
+    }
 `
 
