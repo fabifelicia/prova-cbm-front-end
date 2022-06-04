@@ -12,6 +12,7 @@ export const DivContainer = styled(Container) `
   background-color: #f7f7f7;
   font-family: 'Inter';
   font-weight: 500;
+  
 ` 
 
 export const DivCard = styled(Card)`
