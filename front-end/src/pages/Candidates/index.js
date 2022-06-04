@@ -1,25 +1,37 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import { Card, ListGroup, Container, Button } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import * as S from './styled'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 export default function Candidates() {
+
+  const navigate = useNavigate()
+
+  function handleReturn() {
+    navigate('/')
+  }
+
+  function handleProfile() {
+    navigate('/profile')
+  }
+
   return (
-    <Container>
-      <Card style={{ width: '18rem' }}>
-        <Card.Header>Candidatos</Card.Header>
-        <ListGroup>
-          <ListGroup.Item>Aurora Jesus
-            <Button style={{ background: 'linear-gradient(91.76deg, #D42F43 0%, #D3823E 100%)', height: '50px' , fontWeight: '500'}}>
-              <FontAwesomeIcon icon={solid("magnifying-glass")} color='#fff' />
+    <S.DivContainer>
+      <S.DivCard>
+        <S.Title>Candidatos</S.Title>
+        <S.List>
+          <S.ListGroupItem>Aurora Jesus
+            <S.Buton onClick={handleProfile}>
+              <FontAwesomeIcon style={{marginRight: '5px'}} icon={solid("magnifying-glass")} color='#fff'/>
               Ver
-            </Button>
-          </ListGroup.Item>
-        </ListGroup>
-      </Card>
-    </Container>
+            </S.Buton>
+          </S.ListGroupItem>
+        </S.List>
+        <S.ButtonReturn onClick={handleReturn}>Voltar</S.ButtonReturn>
+      </S.DivCard>
+    </S.DivContainer>
   )
 }
