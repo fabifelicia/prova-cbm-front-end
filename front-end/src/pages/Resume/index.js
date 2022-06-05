@@ -14,7 +14,7 @@ export default function Resume() {
         <S.Title>Resumo</S.Title>
         <S.Label>Sobre</S.Label>
         <S.Input type="text" />
-        <Footer/>
+        <Footer />
       </S.DivCard>
     </S.DivContainer>
   )
