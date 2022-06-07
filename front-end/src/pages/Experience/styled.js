@@ -111,6 +111,3 @@ justify-content: space-between;
 padding: 0 66.16px 0 51px;
 `
 
-export const Btn = styled(Button)`
-  background-color: transparent;
-`

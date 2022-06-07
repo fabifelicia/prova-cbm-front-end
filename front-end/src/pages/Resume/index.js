@@ -27,17 +27,17 @@ export default function Resume() {
       color: '#429542',
       icon: 'success',
       width: '615px',
-      html: '' +
-      '<div>' +
-        '<button class="btn">' + 'Sair' + '</button>' +
-        '<button class="btn btn-primary">' + 'Ver Perfil' + '</button>' +
-      '</div>',
-      showConfirmButton: false,
-      // confirmButtonText: 'Ver perfil',
-      // confirmButtonColor: 'background-image: linear-gradient(91.76deg, #D42F43 0%, #D3823E 100%)',      
-      showCancelButton: false,
-      // cancelButtonText: 'Sair',
-      // cancelButtonColor:'#8A8A8A',
+      // html: '' +
+      // '<div>' +
+      //   '<button class="btn">' + 'Sair' + '</button>' +
+      //   '<button class="btn btn-primary">' + 'Ver Perfil' + '</button>' +
+      // '</div>',
+      showConfirmButton: true,
+      confirmButtonText: 'Ver perfil',
+      confirmButtonColor: 'linear-gradient(91.76deg, #D42F43 0%, #D3823E 100%)',      
+      showCancelButton: true,
+      cancelButtonText: 'Sair',
+      cancelButtonColor:'#8A8A8A',
       reverseButtons: true,           
     }).then(
       (result) => {

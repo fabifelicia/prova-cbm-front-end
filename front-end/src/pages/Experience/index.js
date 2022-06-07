@@ -46,9 +46,9 @@ export default function Experience() {
         <S.Title>Experiência</S.Title>
         <S.Content style={{ marginTop: '45px' }}>
           <S.Label style={{ marginLeft: '22px' }}>Formação</S.Label>
-        <S.Btn>
-          <FontAwesomeIcon icon={solid("circle-plus")} />
-        </S.Btn>
+
+          <FontAwesomeIcon onClick={() => {}} style={{cursor: 'pointer'}} icon={solid("circle-plus")} />
+
         </S.Content>
 
         <S.ContentContainer>
@@ -59,7 +59,9 @@ export default function Experience() {
         </S.ContentContainer>
         <S.Content style={{ marginTop: '30px' }}>
           <S.Label style={{ marginLeft: '22px' }}>Experiência</S.Label>
-          <FontAwesomeIcon icon={solid("circle-plus")} />
+
+          <FontAwesomeIcon onClick={() => {}} style={{cursor: 'pointer'}} icon={solid("circle-plus")} />
+
         </S.Content>
         <S.ContentContainer style={{ height: '283px' }}>
           <S.Label>Empresa</S.Label>
@@ -102,7 +104,7 @@ export default function Experience() {
         <S.ContentContainer style={{ marginTop: '30px', marginBottom: '61px', border: 'none' }}>
           <S.Label style={{ marginLeft: '22px' }}>Competências</S.Label>
           <S.Input style={{ height: '135px', width: '628px', resize: 'none' }} as="textarea" />
-          <FontAwesomeIcon icon={solid("circle-plus")} />
+          <FontAwesomeIcon onClick={() => {}} style={{cursor: 'pointer', position: 'relative', bottom:'120px', left: '20px' }} icon={solid("circle-plus")} />
         </S.ContentContainer>
 
         <S.Footer>
