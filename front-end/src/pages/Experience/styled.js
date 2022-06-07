@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Card, Container, Form, Figure, Button } from 'react-bootstrap'
+import { Card, Container, Form, Figure } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const DivContainer = styled(Container)`
@@ -84,8 +84,18 @@ export const ContentContainer = styled(Container)`
   justify-content: space-evenly;
 `
 
+export const FormData = styled(Form)`
+  display: flex;  
+  align-items: start;
+  justify-content: center; 
+`
+
 export const InputGroup = styled(Form.Group)`
   width: 298px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
 `
 
 export const Label = styled(Form.Label)`
@@ -109,5 +119,33 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 0 66.16px 0 51px;
+`
+
+export const RadioButton = styled(InputGroup) ` 
+  align-items: center;
+  font-size: 20px;
+  line-height: 24.2px;
+  font-weight: 400;
+  font-family: 'Inter';
+  color: #979595;
+  
+  .form-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;      
+  }
+ 
+`
+
+export const Check = styled(Form.Check)`
+  .form-check-input {
+    width: 42px;
+    height: 42px;
+    margin-right: 5px;
+  }
+  
+ .form-check-input:checked {
+    background-color: #D42F43;
+  }
 `
 

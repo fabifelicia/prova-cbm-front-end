@@ -52,10 +52,8 @@ export const NavImage = styled(Figure)`
   background-image: ${props => props.primary 
     ? 'linear-gradient(91.76deg, #D42F43 0%, #D3823E 100%)' 
     : 'none'
-    }
-  
-    
-`
+    } 
+  `
 
 export const Title = styled(Card.Header)`  
   font-size: 40px;  
@@ -71,7 +69,8 @@ export const FormName = styled(Form)`
 
 export const FormData = styled(FormName)`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
   justify-content: space-between; 
   
   &:last-child {
@@ -81,6 +80,10 @@ export const FormData = styled(FormName)`
 
 export const InputGroup = styled(Form.Group)`
   width: 298px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
 `
 
 export const Label = styled(Form.Label)`

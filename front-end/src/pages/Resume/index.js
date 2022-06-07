@@ -7,8 +7,6 @@ import Buton from '../../components/Buton'
 
 import * as S from './styled'
 
-import './styles.css'
-
 import { Image } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 

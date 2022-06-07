@@ -8,7 +8,7 @@ import clipboardIcon from '../../assets/clipboardIcon.png'
 import resumeIcon from '../../assets/resumeIcon.png'
 import line from '../../assets/line.png'
 
-import { Form, Image } from 'react-bootstrap'
+import { Image } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import * as S from './styled'
@@ -68,15 +68,16 @@ export default function Dados() {
           </S.NavImage>
         </S.Nav>
         <S.Title>Dados Pessoais</S.Title>
+
         <S.FormName>
-          <Form.Group className="mb-3">
+          <S.FormData className="mb-3">
             <S.Label>Nome</S.Label>
             <S.Input type="text" />
-          </Form.Group>
+          </S.FormData>
         </S.FormName>
 
-        <S.FormData>
-          <S.InputGroup className="mb-3">
+        <S.FormData style={{ flexDirection: 'row' }}>
+          <S.InputGroup>
             <S.Label>CPF</S.Label>
             <S.Input type="text" />
           </S.InputGroup>
@@ -85,14 +86,13 @@ export default function Dados() {
             <S.Label>Data de Nascimento</S.Label>
             <S.Input type="date" />
           </S.InputGroup>
-
         </S.FormData>
 
-        <S.FormData>
-          <S.InputGroup className="mb-3">
+        <S.FormData style={{ flexDirection: 'row' }}>
+          <S.InputGroup>
             <S.Label>Signo</S.Label>
             <S.Selecao>
-              <option ></option>
+              <option></option>
               {signs.map(signo => {
                 return (
                   <option style={{ fontFamiy: 'Inter', fontWeight: '500', color: '#979595' }} key={signo}>{signo}</option>
@@ -110,13 +110,10 @@ export default function Dados() {
                 )
               })}
             </S.Selecao>
-
           </S.InputGroup>
-
         </S.FormData>
 
-
-        <S.FormData>
+        <S.FormData style={{ flexDirection: 'row' }}>
           <S.InputGroup className="mb-3" controlId="formBasicEmail">
             <S.Label>E-mail</S.Label>
             <S.Input type="email" />
