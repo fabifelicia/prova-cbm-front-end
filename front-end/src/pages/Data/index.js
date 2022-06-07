@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 
-import { Form } from 'react-bootstrap'
+import Buton from '../../components/Buton'
+
+import userIcon from '../../assets/userIcon.png'
+import clipboardIcon from '../../assets/clipboardIcon.png'
+import resumeIcon from '../../assets/resumeIcon.png'
+import line from '../../assets/line.png'
+
+import { Form, Image } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import * as S from './styled'
 
 export default function Dados() {
 
-  const [ signs, setSigns ] = useState([])
-  const [ bloodType, setBloodType ] = useState([])
+  const [signs, setSigns] = useState([])
+  const [bloodType, setBloodType] = useState([])
 
   const navigate = useNavigate()
 
-  useEffect(() => {    
+  useEffect(() => {
     getSignos('http://localhost:3333/signos')
     getBloodType('http://localhost:3333/tipos-sanguineos')
   }, [navigate])
@@ -34,10 +39,34 @@ export default function Dados() {
     setBloodType(bloodType)
   }
 
+  function handleReturn() {
+    navigate('/')
+  }
+
+  function handleNext() {
+    navigate('/experience')
+  }
+
   return (
     <S.DivContainer>
       <S.DivCard>
-        <Header />
+        <S.Nav>
+          <S.NavImage primary>
+            <Image src={userIcon} />
+          </S.NavImage>
+          <S.NavImage>
+            <Image src={line} />
+          </S.NavImage>
+          <S.NavImage>
+            <Image src={clipboardIcon} />
+          </S.NavImage>
+          <S.NavImage>
+            <Image src={line} />
+          </S.NavImage>
+          <S.NavImage>
+            <Image src={resumeIcon} />
+          </S.NavImage>
+        </S.Nav>
         <S.Title>Dados Pessoais</S.Title>
         <S.FormName>
           <Form.Group className="mb-3">
@@ -54,30 +83,37 @@ export default function Dados() {
 
           <S.InputGroup className="mb-3">
             <S.Label>Data de Nascimento</S.Label>
-            <S.Input type="text" />
+            <S.Input type="date" />
           </S.InputGroup>
 
         </S.FormData>
 
-        <S.Label>Signo</S.Label>
-        <Form.Select>
-          <option></option>
-          {signs.map(signo => {
-            return (
-              <option key={signo}>{signo}</option>
-            )
-          })}
-        </Form.Select>
-        
-          <S.Label>Tipo Sanguíneo</S.Label>
-          <Form.Select>
-          <option></option>
-          {bloodType.map(type => {
-            return (
-              <option key={type}>{type}</option>
-            )
-          })}
-        </Form.Select>
+        <S.FormData>
+          <S.InputGroup className="mb-3">
+            <S.Label>Signo</S.Label>
+            <S.Selecao>
+              <option ></option>
+              {signs.map(signo => {
+                return (
+                  <option style={{ fontFamiy: 'Inter', fontWeight: '500', color: '#979595' }} key={signo}>{signo}</option>
+                )
+              })}
+            </S.Selecao>
+          </S.InputGroup>
+          <S.InputGroup className="mb-3">
+            <S.Label>Tipo Sanguíneo</S.Label>
+            <S.Selecao>
+              <option></option>
+              {bloodType.map(type => {
+                return (
+                  <option key={type}>{type}</option>
+                )
+              })}
+            </S.Selecao>
+
+          </S.InputGroup>
+
+        </S.FormData>
 
 
         <S.FormData>
@@ -90,8 +126,12 @@ export default function Dados() {
             <S.Input type="text" />
           </S.InputGroup>
         </S.FormData>
-        <Footer />
+        <S.Footer>
+          <Buton primary={false} name="Voltar" onClick={handleReturn} />
+          <Buton primary={true} name="Próximo" onClick={handleNext} />
+        </S.Footer>
+
       </S.DivCard>
-    </S.DivContainer>
+    </S.DivContainer >
   )
 }

@@ -39,7 +39,7 @@ export default function Candidates() {
         <S.Title>Candidatos</S.Title>
         <S.List>
           {candidates.map(candidate => (
-            <S.ListGroupItem key={candidate.id}>{candidate.name}
+            <S.ListGroupItem key={candidate.id}>{[candidate.name]}
               <S.Buton onClick={handleProfile}>
                 <FontAwesomeIcon style={{ marginRight: '5px' }} icon={solid("magnifying-glass")} color='#fff' />
                 Ver
@@ -47,7 +47,7 @@ export default function Candidates() {
             </S.ListGroupItem>
           ))}
         </S.List>
-        <S.ButtonReturn onClick={handleReturn}>Voltar</S.ButtonReturn>
+       <S.ButtonReturn onClick={handleReturn}>Voltar</S.ButtonReturn>
       </S.DivCard>
     </S.DivContainer>
   )

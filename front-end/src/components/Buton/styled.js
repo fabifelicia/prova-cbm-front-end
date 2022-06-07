@@ -1,16 +1,8 @@
 import styled from 'styled-components'
 
-import { Container, Button  } from 'react-bootstrap'
+import {  Button  } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-
-export const Footer = styled(Container)`
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 0 66.16px 0 51px;
-`
 
 export const Btn = styled(Button)`
 width: 216.84px;

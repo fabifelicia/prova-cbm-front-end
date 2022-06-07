@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import { Card, Button, Container, ListGroup } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export const DivContainer = styled(Container) `
-  width: 1440px;
-  height: 1495px;
+export const DivContainer = styled(Container) `  
   display: flex;
   aling-items: center;
   justify-content: center;
@@ -15,18 +13,15 @@ export const DivContainer = styled(Container) `
 ` 
 
 export const DivCard = styled(Card)`
-  width: 998px;
-  height: 1296px;
+  width: 998px;  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: start;
-  margin-top: 88px; 
+  justify-content: start;  
   padding: 87px 51px 49px 51px;
   border-radius: 70px;
   background-color: #fff;
-  box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.25);
-`
+  box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.25);`
 
 export const Title = styled(Card.Header)`  
   font-size: 40px;
