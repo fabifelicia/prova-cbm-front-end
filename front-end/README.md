@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+<p align='center'>
+  <img src='./src/pages/Home/assets/logo.png'/> 
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align='center'>
 
-## Available Scripts
+   CBMSE 2022 - Challenge
+</h1>
 
-In the project directory, you can run:
+<p align='center'>  
+  <img src="https://img.shields.io/badge/status-em_andamento-yellow"/>
+</p>
 
-### `npm start`
+> Status do Projeto: :heavy_check_mark: (em andamento)
+## Tópicos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+:small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-### `npm test`
+:small_blue_diamond: [Rotas da Requisição](#rotas-da-requisição)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+:small_blue_diamond: [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
-### `npm run build`
+:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Descrição do projeto 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="justify">
+  Projeto desenvolvido como desafio proposto pela SergipeTec - CBMSE
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  Construção de uma aplicação web de cadastro de clientes.
+</p>
 
-### `npm run eject`
+## Funcionalidades
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Rotas da Requisição
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tecnologias Utilizadas
 
-## Learn More
+:heavy_check_mark: [React ](https://nodejs.org/en/download/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:heavy_check_mark: [Bootstrap](https://www.npmjs.com/package/express)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+:heavy_check_mark: [Styled-Components](https://node-postgres.com/)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Como rodar a aplicação :arrow_forward:
 
-### Analyzing the Bundle Size
+No terminal, clone o projeto: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+git clone https://github.com/fabifelicia/case-pipo.git
+```
 
-### Making a Progressive Web App
+Utilize o npm install para instalar as dependências do projeto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+npm install
+```
+### Iniciando/Configurando o banco de dados
 
-### Advanced Configuration
+Para o banco de dados utilizei o ElephantSQL, um serviço de hospedagem de banco de dados PostgreSQL gratuito, que permite armazenar dados de forma estruturada  que podem ser facilmente acessados, gerenciados e atualizados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Para isso, basta fazer o login na plataforma e criar uma nova instância. Após essa etapa, nomeia o projeto e escolhe o plano grátis (Tiny Turtle). Seleciona a região, que já vem configurada por default e clica em criar instância.
 
-### Deployment
+Após criação, abre-se a instância, copia a url disponibilizada e cola no projeto (arquivo .env)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+No menu lateral, escolhe a opção Browser, que abre uma caixa de texto para inserir as queries. Nesse momento, deve-se criar as tabelas que estão no arquivo sql/init.sql, para que a aplicação funcione.
 
-### `npm run build` fails to minify
+Em seguida, crie um arquivo .env, na raiz do seu projeto e insira as varíaveis de ambiente PORT=(porta que rodará a aplicação) e a CONNECTION_API=(string de conexão com banco de dados, copiada anteriormente)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Logo apos essas configuraçoes, inicie o projeto.
+
+```
+npm start
+
+```
+## Desenvolvedores/Contribuintes :octocat:
+
+[<img src="https://avatars.githubusercontent.com/u/39680930?v=4" width=115><br><sub>Fabiana Barreto</sub>](https://github.com/fabifelicia)
+
+Copyright :copyright: 2022 - CBMSE
+
+[![CodeFactor](https://www.codefactor.io/repository/github/fabifelicia/case-pipo/badge)](https://www.codefactor.io/repository/github/fabifelicia/case-pipo)
