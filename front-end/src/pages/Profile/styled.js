@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Card, Button, Container, Form } from 'react-bootstrap'
+import { Card, Container, Form } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const DivContainer = styled(Container) `
@@ -40,8 +40,7 @@ export const Content = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  padding-left: 0; 
-  
+  padding-left: 0;  
 `
 
 export const Title = styled(Card.Title)`
@@ -78,6 +77,5 @@ export const LabelWithColor = styled(Label)`
   background-color: #9BD26F;
   padding: 8px 12px;
   border-radius: 11px; 
-  margin-bottom: 170px; 
+  word-spacing: 20px; 
 `
-

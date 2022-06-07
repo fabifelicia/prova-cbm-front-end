@@ -46,7 +46,9 @@ export default function Experience() {
         <S.Title>Experiência</S.Title>
         <S.Content style={{ marginTop: '45px' }}>
           <S.Label style={{ marginLeft: '22px' }}>Formação</S.Label>
+        <S.Btn>
           <FontAwesomeIcon icon={solid("circle-plus")} />
+        </S.Btn>
         </S.Content>
 
         <S.ContentContainer>

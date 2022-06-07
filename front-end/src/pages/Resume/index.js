@@ -1,9 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import Swal from 'sweetalert2'
+
 import Buton from '../../components/Buton'
 
 import * as S from './styled'
+
+import './styles.css'
 
 import { Image } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -16,8 +20,35 @@ import line2 from '../../assets/line2.png'
 export default function Resume() {
   const navigate = useNavigate()
 
-  function handleSubmit() {
-    
+  function handleSubmit() {      
+
+    Swal.fire({
+      title: 'Cadastro realizado com sucesso!',
+      color: '#429542',
+      icon: 'success',
+      width: '615px',
+      html: '' +
+      '<div>' +
+        '<button class="btn">' + 'Sair' + '</button>' +
+        '<button class="btn btn-primary">' + 'Ver Perfil' + '</button>' +
+      '</div>',
+      showConfirmButton: false,
+      // confirmButtonText: 'Ver perfil',
+      // confirmButtonColor: 'background-image: linear-gradient(91.76deg, #D42F43 0%, #D3823E 100%)',      
+      showCancelButton: false,
+      // cancelButtonText: 'Sair',
+      // cancelButtonColor:'#8A8A8A',
+      reverseButtons: true,           
+    }).then(
+      (result) => {
+        if (result.value) {
+          navigate('/profile')
+        } 
+        if (!result.value) {
+          navigate('/')
+        }
+        }
+      )       
   }
 
   return (

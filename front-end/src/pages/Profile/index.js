@@ -66,8 +66,8 @@ export default function Profile() {
             <S.ContentContainer style={{border:'none', margin: '0', height: '150px'}}>
               {candidates.map(candidate => {
                 return (
-                  <S.Content>
-                    <S.LabelWithColor>{candidate.competencias}</S.LabelWithColor>
+                  <S.Content>                    
+                      <S.LabelWithColor>{candidate.competencias}</S.LabelWithColor>                    
                   </S.Content>
                 )
               })}

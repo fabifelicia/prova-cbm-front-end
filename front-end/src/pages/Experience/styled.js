@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Card, Container, Form, Figure } from 'react-bootstrap'
+import { Card, Container, Form, Figure, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const DivContainer = styled(Container)`
@@ -109,5 +109,8 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 0 66.16px 0 51px;
+`
 
+export const Btn = styled(Button)`
+  background-color: transparent;
 `
