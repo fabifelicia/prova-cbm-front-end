@@ -25,57 +25,57 @@ export default function Experience() {
   const [competencias, setCompetencias] = useState([])
 
   function handleAddForm() {
-    return (
-      <S.ContentContainer>
-        <S.Label>Instituição</S.Label>
-        <S.Input type="text" />
-        <S.Label>Curso</S.Label>
-        <S.Input type="text" />
-      </S.ContentContainer>
-    )
+    // return (
+    //   <S.ContentContainer>
+    //     <S.Label>Instituição</S.Label>
+    //     <S.Input type="text" />
+    //     <S.Label>Curso</S.Label>
+    //     <S.Input type="text" />
+    //   </S.ContentContainer>
+    // )
   }
 
   function handleAddForm2() {
-    return (
-      <S.ContentContainer style={{ height: '283px' }}>
-          <S.Label>Empresa</S.Label>
-          <S.Input type="text" />
-          <S.Label>Cargo</S.Label>
-          <S.Input type="text" />
+    // return (
+    //   <S.ContentContainer style={{ height: '283px' }}>
+    //       <S.Label>Empresa</S.Label>
+    //       <S.Input type="text" />
+    //       <S.Label>Cargo</S.Label>
+    //       <S.Input type="text" />
 
-          <S.FormData>
-            <S.InputGroup>
-              <S.Label>Tempo de Serviço</S.Label>
-              <S.Input type="text" />
-            </S.InputGroup>
+    //       <S.FormData>
+    //         <S.InputGroup>
+    //           <S.Label>Tempo de Serviço</S.Label>
+    //           <S.Input type="text" />
+    //         </S.InputGroup>
 
-            <S.InputGroup style={{ alignItems: 'center' }}>
-              <S.Label>É seu emprego atual</S.Label>
-              <S.RadioButton>
-                {['radio'].map((type) => (
-                  <div key={`inline-${type}`} className="mb-3">
-                    <S.Check
-                      inline
-                      label="Sim"
-                      name="group1"
-                      type={type}
-                      id={`inline-${type}-1`}
-                    />
-                    <S.Check
-                      inline
-                      label="Não"
-                      name="group1"
-                      type={type}
-                      id={`inline-${type}-2`}
+    //         <S.InputGroup style={{ alignItems: 'center' }}>
+    //           <S.Label>É seu emprego atual</S.Label>
+    //           <S.RadioButton>
+    //             {['radio'].map((type) => (
+    //               <div key={`inline-${type}`} className="mb-3">
+    //                 <S.Check
+    //                   inline
+    //                   label="Sim"
+    //                   name="group1"
+    //                   type={type}
+    //                   id={`inline-${type}-1`}
+    //                 />
+    //                 <S.Check
+    //                   inline
+    //                   label="Não"
+    //                   name="group1"
+    //                   type={type}
+    //                   id={`inline-${type}-2`}
 
-                    />
-                  </div>
-                ))}
-              </S.RadioButton>
-            </S.InputGroup>
-          </S.FormData>
-      </S.ContentContainer>
-    )
+    //                 />
+    //               </div>
+    //             ))}
+    //           </S.RadioButton>
+    //         </S.InputGroup>
+    //       </S.FormData>
+    //   </S.ContentContainer>
+    // )
   }
 
   async function handleGetData() {

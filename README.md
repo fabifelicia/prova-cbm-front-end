@@ -1,79 +1,98 @@
-# Prova CBMSE 2022
+<p align='center'>
+  <img src='./src/pages/Home/assets/logo.png'/> 
+</p>
 
-Para concorrer a vaga o candidato terá que desenvolver uma aplicação web utilizando as tecnologias abaixo listadas.
+<h1 align='center'>
+
+   CBMSE 2022 - Challenge
+</h1>
+
+<p align='center'>  
+  <img src="https://img.shields.io/badge/status-em_andamento-yellow"/>
+</p>
+
+> Status do Projeto: 🟡: (em andamento)
+## Tópicos
+
+:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
+
+:small_blue_diamond: [Funcionalidades](#funcionalidades)
+
+:small_blue_diamond: [Rotas da Requisição](#rotas-da-requisição)
+
+:small_blue_diamond: [Tecnologias Utilizadas](#tecnologias-utilizadas)
+
+:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
+
+## Descrição do projeto 
+
+<p align="justify">
+  Projeto desenvolvido como desafio proposto pela SergipeTec - CBMSE
+
+  Construção de uma aplicação web de cadastro de candidatos para compor um curriculo.
+</p>
+
+## Funcionalidades
+- O projeto desenvolvido tem a finalidade de cadastrar dados de um candidato.
+
+- O sistema precisa estar apto para cadastrar os candidatos. Ao escolher se cadastrar, uma nova página será apresentada para ele preencher seu dados pessoais.
+
+- Após incluir od dados, será levado a outra página que deverá preencher com dados da sua experiencia e formação, incluindo também suas competencias. 
+
+- Após o preenchimento, ele irá fazer um resumo de sua trajetoria profissional. 
+
+- Por fim, o candidato será levado a uma página que apresenta seus dados em formato de currículo.
+
+- O usuário poderá também visualizar a lista de candidatos cadastrados, podendo visualizar o curriculo de um determinado candidato. 
+
+## Rotas da Requisição
+Existe uma pasta **server** onde existe um mock de uma api com os end-point nescessarios. Para executar basta acessar a pasta pelo terminal e colocar os comandos `npm install` e `npm start` após isso basta acessar a url: `http://localhost:6666`
+
+### Listar candidatos/signos/tipos sanguineos/competencias
+
+`GET /perfil` - retorna daodos do candidato
+
+`GET /signos` - retorna todos os signos para ser escolhido pelo candidato
+
+`GET /tipos-sanguineos` - retorna os tipos sanguineos para ser escolhido pelo candidato
+
+`GET /competencias`  - retorna as competencias/tecnologias que o candidato pode apresentar
+
+## Tecnologias Utilizadas
+
+:heavy_check_mark: [React](https://pt-br.reactjs.org/)
+
+:heavy_check_mark: [React-Router-Dom](https://v5.reactrouter.com/web/guides/quick-start)
+
+:heavy_check_mark: [React-Bootstrap](https://react-bootstrap.github.io/)
+
+:heavy_check_mark: [Styled-Components](https://styled-components.com/)
+
+:heavy_check_mark: [SweetAlert2](https://sweetalert2.github.io/)
 
 
-# Tecnologias
-- React
-- Bootstrap, Material Design ou qualquer framework de estilização
+## Como rodar a aplicação :arrow_forward:
 
+No terminal, clone o projeto: 
 
-## Instruções da prova
+```
+git clone https://github.com/fabifelicia/prova-cbm-front-end.git
+```
+Entre na pasta do projeto front-end e utilize o npm install para instalar as dependências do projeto. Faça o mesmo para a pasta server
 
-- O candidato deve fazer um **fork** desse repositório e criar sua estrutura de pastas sendo que no mesmo repositório tem que esta o **front-end**.
-- Existe uma pasta **server** onde existe um mock de uma api com os end-point nescessarios. Para executar basta acessar a pasta pelo terminal e colocar os comandos `npm install` e `npm start` apos isso basta acessar a url: `http://localhost:6666`
-- Após o projeto pronto o candidato deve fazer o *commit e push* para o seu repositório **não sendo necessário** solicitar um **pull-request** basta apenas responder o email _[lima.silva@sergipetec.org.br]()_ com assunto prova finalizada e o link do git
+```
+npm install
+```
+Após, inicie ambos os projetos com o seguinte comando:
 
+```
+npm start
 
-## Projeto
+```
+## Desenvolvedores/Contribuintes :octocat:
 
-- Existe um Figma com o prototipo [(Link)](https://www.figma.com/file/5TVAkg1MawaEpuMpUDEK3J/Prova-CBM-Front-end?node-id=0%3A1), que deve ser seguido.
-- Regras de input:
-  - **CPF** deve conter válidição e mascara, mas quando for enviar para o end-point a máscara deve ser retirada
-  - **Data de Nascimento** não pode permitir pessoas menores de 18 anos
-  - **Signo** deve ser um select com as opções (Com os valores da API)
-  - **Tipo Sanguíneo** deve ser um select com a opções (Com os valores da API)
-  - **E-mail** deve ter validação de tipo
-  - **Telefone** deve ter mascara e validação, mas quando for enviar para o endpoint a máscara deve ser retirada
-  - **Formação** pode ser mais de uma
-  - **Experiência** pode ser mais de uma
-  - **Competencia** é um select option multiplo (Com os valores da API)
-  - **Sobre** é campo texto livre
-  - **Todos os campos são obrigatórios !!!!!**
+[<img src="https://avatars.githubusercontent.com/u/39680930?v=4" width=115><br><sub>Fabiana Barreto</sub>](https://github.com/fabifelicia)
 
+Copyright :copyright: 2022 - CBMSE
 
-
-## Oque será avaliado?
-O desafio será avaliado através dos seguintes critérios.
-
-- O quão próximo chegou ao protótipo
-- Habilidade com framework
-- Habilidade em estilização de página HTML
-- Arquitetura do projeto
-- Utilização de componentes
-- Responsividade
-- Testes unitários
-
-## Oque seria um plus
-- Teste de integração (cypress)
-- Docker
-
-## Boas Práticas
-
-- O código está bem estruturado?
-- O código está fluente na linguagem?
-- O código faz o uso correto de Design Patterns?
-
-## Documentação
-
-- O código foi entregue com um arquivo de README claro de como se guiar?
-- O código possui comentários pertinentes?
-- Os commits são pequenos e consistentes?
-- As mensagens de commit são claras?
-
-## Código Limpo
-
-- O código possibilita expansão para novas funcionalidades?
-- O código é Don't Repeat Yourself?
-- O código é fácil de compreender?
-
-## Links úteis
-
-- [Figma da Prova](https://www.figma.com/file/5TVAkg1MawaEpuMpUDEK3J/Prova-CBM-Front-end?node-id=0%3A1)
-- [Design Patterns](https://www.uxpin.com/studio/blog/react-design-patterns/)
-- [Material designer](https://mui.com/pt/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Testes unitarios](https://testing-library.com/docs/react-testing-library/example-intro)
-- [React+Docker](https://sharklabs.com.br/reactjs-docker-desenvolvendo-web-apps/)
-- [Git-flow](https://medium.com/trainingcenter/utilizando-o-fluxo-git-flow-e63d5e0d5e04)
-- [Semantic Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+[![CodeFactor](https://www.codefactor.io/repository/github/fabifelicia/prova-cbm-front-end/badge)](https://www.codefactor.io/repository/github/fabifelicia/prova-cbm-front-end)
