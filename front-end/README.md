@@ -33,18 +33,22 @@
 </p>
 
 ## Funcionalidades
-
+O projeto desenvolvido tem a finalidade de cadastrar dados de um para um currículo.
 
 ## Rotas da Requisição
-
+O projeto possui um servidor com mocks para realizar testes 
 
 ## Tecnologias Utilizadas
 
-:heavy_check_mark: [React ](https://nodejs.org/en/download/)
+:heavy_check_mark: [React](https://pt-br.reactjs.org/)
 
-:heavy_check_mark: [Bootstrap](https://www.npmjs.com/package/express)
+:heavy_check_mark: [React-Router-Dom](https://v5.reactrouter.com/web/guides/quick-start)
 
-:heavy_check_mark: [Styled-Components](https://node-postgres.com/)
+:heavy_check_mark: [React-Bootstrap](https://react-bootstrap.github.io/)
+
+:heavy_check_mark: [Styled-Components](https://styled-components.com/)
+
+:heavy_check_mark: [SweetAlert2](https://sweetalert2.github.io/)
 
 
 ## Como rodar a aplicação :arrow_forward:
