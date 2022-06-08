@@ -29,7 +29,8 @@
 <p align="justify">
   Projeto desenvolvido como desafio proposto pela SergipeTec - CBMSE
 
-  Construção de uma aplicação web de cadastro de candidatos para compor um curriculo.
+  Construção de uma aplicação web de cadastro de candidatos para compor um curriculo, baseado no prototipo hospedado no Figma [(Link)](https://www.figma.com/file/5TVAkg1MawaEpuMpUDEK3J/Prova-CBM-Front-end?node-id=0%3A1).
+  
 </p>
 
 ## Funcionalidades
