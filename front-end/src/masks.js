@@ -24,3 +24,12 @@ export function phone(e) {
   e.currentTarget.value = value;
   return e;
 }
+
+export function cpfOculto(e) {
+  e.currentTarget.maxLength = 14;
+  let value = e.currentTarget.value;
+  value = value.replace(/\D/g, "");
+  value = value.replace(/^(\d{3})?(\d{3})?(\d{3})?(\d{2})/, "$1.***.***-$4");
+  e.currentTarget.value = value;
+  return e;
+}
