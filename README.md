@@ -38,26 +38,26 @@
 
 - O sistema precisa estar apto para cadastrar os candidatos. Ao escolher se cadastrar, uma nova página será apresentada para ele preencher seu dados pessoais.
 
-- Após inclusão dos dados, o usuario navegará ´para a próxima página, que deverá ser preenchida com dados da sua experiencia e formação, incluindo também suas competências/tecnologias. 
+- Após inclusão dos dados, o usuario navegará para a próxima página, que deverá ser preenchida com dados da sua experiência e formação, incluindo também suas competências/tecnologias. 
 
-- Após o preenchimento, ele fará um resumo de sua trajetoria profissional, na página seguinte. 
+- Após o preenchimento, o usuário fará um resumo de sua trajetória profissional, na página seguinte. 
 
 - Por fim, o candidato será levado a uma página que apresentará seus dados em formato de currículo.
 
 - O usuário poderá também visualizar a lista de candidatos cadastrados, podendo visualizar o currículo de um determinado candidato. 
 
 ## Rotas da Requisição
-Existe uma pasta **server** onde existe um mock de uma api com os end-points nescessários. Para executar basta acessar a pasta pelo terminal e colocar os comandos `npm install` e `npm start` após isso basta acessar a url: `http://localhost:6666`
+Existe uma pasta **server** onde existe um mock de uma api com os end-points nescessários. Para executar basta acessar a pasta pelo terminal e colocar os comandos `npm install` e `npm start` e, após isso, basta acessar a url: `http://localhost:6666`
 
 ### Listar candidatos/signos/tipos sanguineos/competencias
 
-`GET /perfil` - retorna daodos do candidato
+`GET /perfil` - retorna os dados do candidato
 
-`GET /signos` - retorna todos os signos para ser escolhido pelo candidato
+`GET /signos` - retorna a lista dos signos para ser escolhido pelo candidato
 
-`GET /tipos-sanguineos` - retorna os tipos sanguineos para ser escolhido pelo candidato
+`GET /tipos-sanguineos` - retorna a lista dos tipos sanguineos para ser escolhido pelo candidato
 
-`GET /competencias`  - retorna as competencias/tecnologias que o candidato pode apresentar
+`GET /competencias`  - retorna as competências/tecnologias que o candidato pode apresentar
 
 ## Tecnologias Utilizadas
 
