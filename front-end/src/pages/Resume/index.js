@@ -53,7 +53,7 @@ export default function Resume() {
     <S.DivContainer>
       <S.DivCard>
       <S.Nav>
-          <S.NavImage secundary>
+          <S.NavImage secundary={true}>
             <Image src={userIcon} />
           </S.NavImage>
           <S.NavImage>
@@ -65,7 +65,7 @@ export default function Resume() {
           <S.NavImage>
             <Image src={line2} />
           </S.NavImage>
-          <S.NavImage primary>
+          <S.NavImage primary={true}>
             <Image src={resumeIcon} />
           </S.NavImage>
         </S.Nav>

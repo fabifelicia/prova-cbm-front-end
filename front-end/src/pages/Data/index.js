@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import Buton from '../../components/Buton'
@@ -13,10 +13,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import * as S from './styled'
 
+import * as mask from '../../masks.js'
+
 export default function Dados() {
 
   const [signs, setSigns] = useState([])
   const [bloodType, setBloodType] = useState([])
+  const [user, setUser] = useState({})
 
   const navigate = useNavigate()
 
@@ -43,15 +46,30 @@ export default function Dados() {
     navigate('/')
   }
 
-  function handleNext() {
+  function handleNext() {    
     navigate('/experience')
   }
+
+  const handleChange = useCallback((e) => {
+    setUser({ 
+      ...user,
+      [e.currentTarget.name]: e.currentTarget.value
+    })
+  },[user])
+
+  const handleCpf = useCallback((e) => {    
+      mask.cpf(e)    
+  },[])
+
+  const handlePhone = useCallback((e) => {    
+    mask.phone(e)    
+},[])
 
   return (
     <S.DivContainer>
       <S.DivCard>
         <S.Nav>
-          <S.NavImage primary>
+          <S.NavImage primary={true}>
             <Image src={userIcon} />
           </S.NavImage>
           <S.NavImage>
@@ -79,7 +97,7 @@ export default function Dados() {
         <S.FormData style={{ flexDirection: 'row' }}>
           <S.InputGroup>
             <S.Label>CPF</S.Label>
-            <S.Input type="text" />
+            <S.Input type="text" name='cpf' onChange={handleChange} onKeyUp={handleCpf} />
           </S.InputGroup>
 
           <S.InputGroup className="mb-3">
@@ -120,7 +138,7 @@ export default function Dados() {
           </S.InputGroup>
           <S.InputGroup className="mb-3">
             <S.Label>Telefone</S.Label>
-            <S.Input type="text" />
+            <S.Input type="text" name='phone' onChange={handleChange} onKeyUp={handlePhone}/>
           </S.InputGroup>
         </S.FormData>
         <S.Footer>

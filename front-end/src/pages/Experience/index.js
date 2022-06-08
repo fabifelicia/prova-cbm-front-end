@@ -89,13 +89,13 @@ export default function Experience() {
     <S.DivContainer>
       <S.DivCard>
         <S.Nav>
-          <S.NavImage secundary>
+          <S.NavImage secundary={true}>
             <Image src={userIcon} />
           </S.NavImage>
           <S.NavImage>
             <Image src={line2} />
           </S.NavImage>
-          <S.NavImage primary>
+          <S.NavImage primary={true}>
             <Image src={clipboardIcon} />
           </S.NavImage>
           <S.NavImage>
