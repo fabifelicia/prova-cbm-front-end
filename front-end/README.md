@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/status-em_andamento-yellow"/>
 </p>
 
-> Status do Projeto: :heavy_check_mark: (em andamento)
+> Status do Projeto: 🟡: (em andamento)
 ## Tópicos
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
@@ -52,27 +52,14 @@
 No terminal, clone o projeto: 
 
 ```
-git clone https://github.com/fabifelicia/case-pipo.git
+git clone https://github.com/fabifelicia/prova-cbm-front-end.git
 ```
-
-Utilize o npm install para instalar as dependências do projeto.
+Entre na pasta do projeto front-end e utilize o npm install para instalar as dependências do projeto. Faça o mesmo para a pasta server
 
 ```
 npm install
 ```
-### Iniciando/Configurando o banco de dados
-
-Para o banco de dados utilizei o ElephantSQL, um serviço de hospedagem de banco de dados PostgreSQL gratuito, que permite armazenar dados de forma estruturada  que podem ser facilmente acessados, gerenciados e atualizados.
-
-Para isso, basta fazer o login na plataforma e criar uma nova instância. Após essa etapa, nomeia o projeto e escolhe o plano grátis (Tiny Turtle). Seleciona a região, que já vem configurada por default e clica em criar instância.
-
-Após criação, abre-se a instância, copia a url disponibilizada e cola no projeto (arquivo .env)
-
-No menu lateral, escolhe a opção Browser, que abre uma caixa de texto para inserir as queries. Nesse momento, deve-se criar as tabelas que estão no arquivo sql/init.sql, para que a aplicação funcione.
-
-Em seguida, crie um arquivo .env, na raiz do seu projeto e insira as varíaveis de ambiente PORT=(porta que rodará a aplicação) e a CONNECTION_API=(string de conexão com banco de dados, copiada anteriormente)
-
-Logo apos essas configuraçoes, inicie o projeto.
+Após, inicie ambos os projetos com o seguinte comando:
 
 ```
 npm start
@@ -84,4 +71,4 @@ npm start
 
 Copyright :copyright: 2022 - CBMSE
 
-[![CodeFactor](https://www.codefactor.io/repository/github/fabifelicia/case-pipo/badge)](https://www.codefactor.io/repository/github/fabifelicia/case-pipo)
+[![CodeFactor](https://www.codefactor.io/repository/github/fabifelicia/prova-cbm-front-end/badge)](https://www.codefactor.io/repository/github/fabifelicia/prova-cbm-front-end)
